@@ -1,0 +1,13 @@
+body {
+    background-color: #f5f7fb;
+}
+
+.card {
+    max-width: 600px;
+    margin: auto;
+    border-radius: 16px;
+}
+
+img {
+    max-width: 300px;
+}
