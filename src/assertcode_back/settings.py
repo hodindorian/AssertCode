@@ -1,10 +1,14 @@
 from pathlib import Path
 
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = True
+USE_X_FORWARDED_HOST = True
 BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-n@kvzh%2@yl$#-cw)*4u3!nq(ne$=6^k)3ty8%s^yg5f7j#uyr'
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ["assertcode.hodindorian.com"]
+ALLOWED_HOSTS = ["*"]
 
 
 INSTALLED_APPS = [
@@ -84,3 +88,7 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
+
+CSRF_TRUSTED_ORIGINS = [
+    'https://assertcode.hodindorian.com',
+]

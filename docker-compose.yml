@@ -1,6 +1,6 @@
 services:
   assertcode:
-    build: .
+    build: ./src/
 
     container_name: assertcode
 

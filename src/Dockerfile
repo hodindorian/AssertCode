@@ -17,8 +17,6 @@ COPY . .
 
 RUN python manage.py collectstatic --noinput
 
-RUN django-admin compilemessages
-
 EXPOSE 8765
 
 CMD ["gunicorn", "--bind", "0.0.0.0:8765", "assertcode_back.wsgi:application"]

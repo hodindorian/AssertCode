@@ -1,14 +1,11 @@
+from django.conf import settings
+import qrcode
 import uuid
 from pathlib import Path
-
-import qrcode
-
-from django.conf import settings
 
 
 def generate_qr_code(data, fill_color, back_color):
     qr = qrcode.QRCode(
-        version=1,
         box_size=10,
         border=4
     )
