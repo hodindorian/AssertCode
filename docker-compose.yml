@@ -1,0 +1,16 @@
+services:
+  assertcode:
+    build: .
+
+    container_name: assertcode
+
+    restart: unless-stopped
+
+    ports:
+      - "8765:8765"
+
+    volumes:
+      - ./media:/app/media
+
+    environment:
+      - DJANGO_SETTINGS_MODULE=assertcode_back.settings

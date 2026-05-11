@@ -1,3 +1,5 @@
 Django
 qrcode
 Pillow
+gunicorn
+whitenoise
